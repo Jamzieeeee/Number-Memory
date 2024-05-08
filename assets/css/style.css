@@ -1,0 +1,29 @@
+/* --------- Global style */
+
+body {
+    background-color: lightblue;
+    font-family: "Open Sans", sans-serif;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* --------- Heading */
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+/* --------- Game layout */
+
+.game-area {
+    border-style: outset;
+}
+
+/* --------- Buttons */
+
+/* --------- Media queries */
