@@ -41,3 +41,9 @@ function nextLevel() {
     // show level splash and then show game area
     showElementFor3Seconds('level-splash', showGameArea);
 }
+
+let level = 1
+
+function generateNumber() {
+    Math.floor(Math.random() * (10 ** level))
+}
