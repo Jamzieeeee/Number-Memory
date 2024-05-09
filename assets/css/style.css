@@ -11,19 +11,25 @@ body {
     flex-wrap: wrap;
 }
 
-/* --------- Heading */
+.hide-on-start {
+    display: none;
+}
+
+/* Heading */
 
 .heading {
     text-align: center;
     font-size: 2.5rem;
 }
 
-/* --------- Game layout */
+/* Intro screen */
+
+
+
+/* Game layout */
 
 .game-area {
     border-style: outset;
 }
 
-/* --------- Buttons */
-
-/* --------- Media queries */
+/* Media queries */
