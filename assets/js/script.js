@@ -32,10 +32,8 @@ let randomNumber = 0
 
 function generateNumber() {
     randomNumber = Math.floor(Math.random() * (10 ** level))
+    document.getElementById("random-number").textContent = randomNumber; // update random number in html span
 }
-
-// show random number in html span
-document.getElementById("random-number").textContent = randomNumber;
 
 // next level function
 function nextLevel() {
