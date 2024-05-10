@@ -28,7 +28,7 @@ body {
 
 /* Game layout */
 
-.game-area {
+#game-area {
     border-style: outset;
 }
 

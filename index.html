@@ -14,6 +14,7 @@
 <body>
     <h1 class="heading">Number Memory</h1>
 
+    <!--Intro Screen-->
     <div id="intro-area">
         <p id="intro-text">
             number shows, type in number
@@ -21,14 +22,12 @@
         <button id="start-button" type="button" onclick="nextLevel()">Start Game</button>
     </div>
 
-    <div id="level-splash" class="hide-on-start">
-        <h3>Level 1</h3>
+    <!--Number Splash-->
+    <div id="number-splash" class="hide-on-start">
+        <h3><span id="random-number">0</span></h3>
     </div>
 
     <div id="game-area" class="hide-on-start">
-        <div id="number-display">
-            <h2>69420</h2>
-        </div>
         <div id="input-area">
             <input id="input-box" type="number" name="quantity" min="1" max="100000">
             <button id="input-button" type="submit">Submit</button>
