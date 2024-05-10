@@ -26,13 +26,20 @@ function showElementFor3Seconds(elementId, callback) {
     }, 3000); // 3000 milliseconds = 3 seconds
 }
 
-let level = 5
+let level = 0
 
 let randomNumber = 0
 
+// random number function
 function generateNumber() {
     randomNumber = Math.floor(Math.random() * (10 ** level))
     document.getElementById("random-number").textContent = randomNumber; // update random number in html span
+}
+
+// increase level function
+function increaseLevel() {
+    level++;
+    document.getElementById("level-display").textContent = level;
 }
 
 // next level function
@@ -47,6 +54,10 @@ function nextLevel() {
     function showGameArea() {
         showElement('game-area');
     }
+
+    // increase level by 1
+    increaseLevel();
+    console.log(level);
 
     // generate new number
     generateNumber();
