@@ -26,7 +26,7 @@ function showElementFor3Seconds(elementId, callback) {
     }, 3000); // 3000 milliseconds = 3 seconds
 }
 
-let level = 4
+let level = 0
 
 let randomNumberAsString = 0
 
@@ -55,6 +55,9 @@ function nextLevel() {
     // hide game area
     hideElement('game-area');
 
+    // hide results screen
+    hideElement('results')
+
     // callback function to show the game area after the level-splash
     function showGameArea() {
         showElement('game-area');
@@ -74,4 +77,15 @@ function nextLevel() {
 
 // submit function
 function submitAnswer() {
+    hideElement("game-area");
+
+    showElement("results");
+
+    // change button text
+    if (level == 0) {
+        document.getElementById("next-or-restart").textContent = "Restart Game"
+    } else {
+        document.getElementById("next-or-restart").textContent = "Next Level"
+    }
 }
+

@@ -30,7 +30,7 @@
     <div id="game-area" class="hide-on-start">
         <div id="input-area">
             <input id="input-box" type="number" name="quantity" min="1" max="100000">
-            <button id="input-button" type="submit">Submit</button>
+            <button id="input-button" type="submit" onclick="submitAnswer()">Submit</button>
         </div>
         <div id="score">
             <h2>Level <span id="level-display"></span></h2>
@@ -47,7 +47,7 @@
         <div>
             <h3>Correct Answer: <span class="random-number"></span></h3>
         </div>
-
+        <button id="next-or-restart" type="button" onclick="nextLevel()"></button>
     </div>
     
     <script src="assets/js/script.js"></script>
