@@ -58,11 +58,13 @@ function nextLevel() {
     hideElement('game-area');
 
     // hide results screen
-    hideElement('results')
+    hideElement('results');
 
     // callback function to show the game area after the level-splash
     function showGameArea() {
         showElement('game-area');
+        document.getElementById("input-box").focus()
+        document.getElementById("input-box").value = ""
     }
 
     // increase level by 1
@@ -75,6 +77,7 @@ function nextLevel() {
 
     // show random number splash and then show game area
     showElementFor3Seconds('number-splash', showGameArea);
+
 }
 
 // submit function
