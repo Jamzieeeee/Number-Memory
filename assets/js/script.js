@@ -30,6 +30,8 @@ let level = 0
 
 let randomNumberAsString = 0
 
+let typedNumber
+
 // random number function
 function generateNumber() {
     // generate random number, and add 0s to start if it isn't the correct number of digits long
@@ -78,6 +80,17 @@ function nextLevel() {
 // submit function
 function submitAnswer() {
     hideElement("game-area");
+
+    // set typedNumber variable
+    typedNumber = document.getElementById("input-box").value
+
+    // if input does not equal random number, set level to 0
+    if (typedNumber !== randomNumberAsString) {
+        level = 0
+    }
+
+    document.getElementById("typed-number").textContent = typedNumber
+    console.log(typedNumber)
 
     showElement("results");
 
