@@ -26,14 +26,19 @@ function showElementFor3Seconds(elementId, callback) {
     }, 3000); // 3000 milliseconds = 3 seconds
 }
 
-let level = 0
+let level = 4
 
-let randomNumber = 0
+let randomNumberAsString = 0
 
 // random number function
 function generateNumber() {
-    randomNumber = Math.floor(Math.random() * (10 ** level))
-    document.getElementById("random-number").textContent = randomNumber; // update random number in html span
+    // generate random number, and add 0s to start if it isn't the correct number of digits long
+    randomNumberAsString = Math.floor(Math.random() * (10 ** level)).toString().padStart(level, '0')
+
+    // update random number in all html spans
+    for (let e of document.getElementsByClassName("random-number")) {
+        e.textContent = randomNumberAsString;
+    }  
 }
 
 // increase level function
@@ -61,8 +66,12 @@ function nextLevel() {
 
     // generate new number
     generateNumber();
-    console.log(randomNumber);
+    console.log(randomNumberAsString);
 
     // show random number splash and then show game area
     showElementFor3Seconds('number-splash', showGameArea);
+}
+
+// submit function
+function submitAnswer() {
 }
