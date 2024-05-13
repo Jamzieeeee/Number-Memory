@@ -11,19 +11,21 @@ function hideElement(elementId) {
 }
 
 // show then hide element function
-function showElementFor3Seconds(elementId, callback) {
+function showElementForNSeconds(elementId, callback) {
     // show the element
     showElement(elementId);
 
-    // wait for 3 seconds
+    // wait for n seconds
     setTimeout(function() {
-        // hide the element after 3 seconds
+        // hide the element after n seconds
         hideElement(elementId);
         // Execute the callback function after hiding the element
         if (callback && typeof callback === 'function') {
             callback();
         }
-    }, 3000); // 3000 milliseconds = 3 seconds
+    }, (1 + (level / 2)) * 1000); // n seconds
+
+    console.log((1 + (level / 2)) * 1000)
 }
 
 let level = 0
@@ -76,7 +78,7 @@ function nextLevel() {
     console.log(randomNumberAsString);
 
     // show random number splash and then show game area
-    showElementFor3Seconds('number-splash', showGameArea);
+    showElementForNSeconds('number-splash', showGameArea);
 
 }
 
