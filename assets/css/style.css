@@ -11,6 +11,32 @@ body {
     flex-wrap: wrap;
 }
 
+button {
+    background-color: white;
+    border: 2px solid pink;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-size: 12pt;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+input {
+    border: 2px solid lightblue;
+    border-radius: 2px;
+    font-size: 12pt;
+    margin-bottom: 4px;
+    outline: none;
+}
+
+input:focus {
+    border-color: pink;
+}
+
 .hide-on-start {
     display: none;
 }
@@ -29,7 +55,7 @@ body {
 /* Game layout */
 
 #game-area {
-    border-style: outset;
+    border: pink outset;
 }
 
 /* Media queries */
