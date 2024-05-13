@@ -17,18 +17,20 @@
     <!--Intro Screen-->
     <div id="intro-area">
         <p id="intro-text">
-            number shows, type in number
+            A number will show on the screen for a short time.<br>
+            Type in the correct number to progress to the next level, which will add 1 digit to the number.
         </p>
         <button id="start-button" type="button" onclick="nextLevel()">Start Game</button>
     </div>
 
     <!--Number Splash-->
     <div id="number-splash" class="hide-on-start">
-        <h3><span class="random-number"></span></h3>
+        <h2><span class="random-number"></span></h2>
     </div>
 
     <!--Game Area-->
     <div id="game-area" class="hide-on-start">
+        <h3 id="game-area-text">What was the number shown?</h3>
         <div id="input-area">
             <input id="input-box" name="quantity">
             <button id="input-button" type="submit" onclick="submitAnswer()">Submit</button>

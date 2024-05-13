@@ -23,7 +23,7 @@ function showElementForNSeconds(elementId, callback) {
         if (callback && typeof callback === 'function') {
             callback();
         }
-    }, (1 + (level / 2)) * 1000); // n seconds
+    }, (1 + (level / 2)) * 1000); // n seconds: n = half level number + 1, x1000 to get from miliseconds to seconds
 
     console.log((1 + (level / 2)) * 1000)
 }
