@@ -16,7 +16,7 @@ function showElementForNSeconds(elementId, callback) {
     showElement(elementId);
 
     // wait for n seconds
-    setTimeout(function() {
+    setTimeout(function () {
         // hide the element after n seconds
         hideElement(elementId);
         // Execute the callback function after hiding the element
@@ -25,24 +25,24 @@ function showElementForNSeconds(elementId, callback) {
         }
     }, (1 + (level / 2)) * 1000); // n seconds: n = half level number + 1, x1000 to get from miliseconds to seconds
 
-    console.log((1 + (level / 2)) * 1000)
+    console.log((1 + (level / 2)) * 1000);
 }
 
-let level = 0
+let level = 0;
 
-let randomNumberAsString = 0
+let randomNumberAsString = 0;
 
-let typedNumber
+let typedNumber;
 
 // random number function
 function generateNumber() {
     // generate random number, and add 0s to start if it isn't the correct number of digits long
-    randomNumberAsString = Math.floor(Math.random() * (10 ** level)).toString().padStart(level, '0')
+    randomNumberAsString = Math.floor(Math.random() * (10 ** level)).toString().padStart(level, '0');
 
     // update random number in all html spans
     for (let e of document.getElementsByClassName("random-number")) {
         e.textContent = randomNumberAsString;
-    }  
+    }
 }
 
 // increase level function
@@ -65,8 +65,8 @@ function nextLevel() {
     // callback function to show the game area after the level-splash
     function showGameArea() {
         showElement('game-area');
-        document.getElementById("input-box").focus()
-        document.getElementById("input-box").value = ""
+        document.getElementById("input-box").focus();
+        document.getElementById("input-box").value = "";
     }
 
     // increase level by 1
@@ -87,23 +87,23 @@ function submitAnswer() {
     hideElement("game-area");
 
     // set typedNumber variable
-    typedNumber = document.getElementById("input-box").value
+    typedNumber = document.getElementById("input-box").value;
 
     // if input does not equal random number, set level to 0
     if (typedNumber !== randomNumberAsString) {
-        level = 0
+        level = 0;
     }
 
-    document.getElementById("typed-number").textContent = typedNumber
-    console.log(typedNumber)
+    document.getElementById("typed-number").textContent = typedNumber;
+    console.log(typedNumber);
 
     showElement("results");
 
     // change button text
     if (level == 0) {
-        document.getElementById("next-or-restart").textContent = "Restart Game"
+        document.getElementById("next-or-restart").textContent = "Restart Game";
     } else {
-        document.getElementById("next-or-restart").textContent = "Next Level"
+        document.getElementById("next-or-restart").textContent = "Next Level";
     }
 }
 
