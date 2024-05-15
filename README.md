@@ -116,6 +116,8 @@ This project was based off the Number Memory game on Human Benchmark
 Some code was copied from the Love Maths sample project source code, such as the initial HTML structure.
 - https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode
 
+Favicon sourced from [favicon.cc](https://www.favicon.cc/?action=icon&file_id=109713)
+
 ### Information Sources
 
 Many syntax and language queries were answered by [W3Schools](https://www.w3schools.com), as well as my Father, who is a programmer by occupation.\
