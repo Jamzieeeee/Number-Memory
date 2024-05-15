@@ -41,6 +41,11 @@ input:focus {
     display: none;
 }
 
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+}
+
 /* Heading */
 
 .heading {
@@ -52,10 +57,26 @@ input:focus {
 
 
 
-/* Game layout */
+/* Game area */
 
 #game-area {
     border: pink outset;
+}
+
+/* Results screen */
+
+#results {
+    align-self: center;
+    width: fit-content;
+}
+
+#your-answer {
+    padding-left: 25px;
+    text-align: left;
+}
+
+#correct-answer {
+    text-align: left;
 }
 
 /* Media queries */
