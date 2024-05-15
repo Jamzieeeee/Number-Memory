@@ -24,8 +24,6 @@ function showElementForNSeconds(elementId, callback) {
             callback();
         }
     }, (1 + (level / 2)) * 1000); // n seconds: n = half level number + 1, x1000 to get from miliseconds to seconds
-
-    console.log((1 + (level / 2)) * 1000);
 }
 
 let level = 0;
@@ -71,11 +69,9 @@ function nextLevel() {
 
     // increase level by 1
     increaseLevel();
-    console.log(level);
 
     // generate new number
     generateNumber();
-    console.log(randomNumberAsString);
 
     // show random number splash and then show game area
     showElementForNSeconds('number-splash', showGameArea);
@@ -86,14 +82,14 @@ function nextLevel() {
 var input = document.getElementById("input-box");
 
 // Execute a function when the user presses a key on the keyboard
-input.addEventListener("keypress", function(event) {
-  // If the user presses the "Enter" key on the keyboard
-  if (event.key === "Enter") {
-    // Cancel the default action, if needed
-    event.preventDefault();
-    // Trigger the button element with a click
-    document.getElementById("input-button").click();
-  }
+input.addEventListener("keypress", function (event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("input-button").click();
+    }
 });
 
 // submit function
@@ -109,7 +105,6 @@ function submitAnswer() {
     }
 
     document.getElementById("typed-number").textContent = typedNumber;
-    console.log(typedNumber);
 
     showElement("results");
 
