@@ -32,6 +32,8 @@ Once the user has submitted their answer, they are shown what they typed and wha
 - If their answer was correct, they can continue to the next level.
 - If their answer was not correct, they are forced to restart the game from level 1.
 
+![Results screen image](documentation/results-screen.png)
+
 ### Future Features
 
 - High score system
@@ -69,7 +71,7 @@ Once the user has submitted their answer, they are shown what they typed and wha
 - When the generate number function was called, the variable was not updating the relevent HTML elements with its value.
 - This was because the elements were identified by a class selector, which the function returns as an array and was only updating the first element.
 - This was solved by using a `for` loop to update each element within the array.
-<p>&nbsp;</p>
+<p>&nbsp;</p> <!--Work around github markdown rendering bug-->
 
 - When the generate number fuction was called, sometimes the number did not contain the correct amount of digits.
 - This was because if the `Math.random` method returned a number below 0.1, the resulting calculation returned a number with too few significant figures.
