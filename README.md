@@ -1,6 +1,6 @@
 # [NUMBER MEMORY](https://jamzieeeee.github.io/Number-Memory/ "Click to view deployed site")
 
-Number Memory is a site for users to test their short-term memory. It contains a simple digit memorisation game which increases in difficulty as you progress. The site is responsive, and designed to function equally well on mobile, tablet, and desktop devices.
+Number Memory is a site for users to test and improve their short-term memory. It contains a simple digit memorisation game which increases in difficulty as you progress. The site is responsive, and designed to function equally well on mobile, tablet, and desktop devices.
 
 ![Mockup image](documentation/number-memory-mockup.png)
 
